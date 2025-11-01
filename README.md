@@ -1,22 +1,22 @@
-\# Social Media Login Service
+# Social Media Login Service
 
 
 
-\### Author: Keya Gangadharan
+### Author: Keya Gangadharan
 
-\### Course: SWENG 861 — Week 2 Assignment
+### Course: SWENG 861 — Week 2 Assignment
 
-\### Date: 11/1/25
+### Date: 11/1/25
 
 
 
-\## Overview
+## Overview
 
 This project implements a social media login service that allows users to authenticate using their Google and Facebook accounts via OAuth 2.0. It demonstrates secure authentication flow, session management, error handling, and a responsive user interface built with Node.js, Express, and Passport.js. The system can be extended to support Apple, LinkedIn, or Okta SSO for additional security and scalability.
 
 
 
-\## Features Implemented
+## Features Implemented
 
 | Feature | Description |
 
@@ -36,69 +36,69 @@ This project implements a social media login service that allows users to authen
 
 
 
-\## Technologies Used
+## Technologies Used
 
-\- Node.js + Express.js
+- Node.js + Express.js
 
-\- Passport.js (with passport-google-oauth20 and passport-facebook)
+- Passport.js (with passport-google-oauth20 and passport-facebook)
 
-\- EJS templating
+- EJS templating
 
-\- express-session
+- express-session
 
-\- dotenv
+- dotenv
 
-\- OAuth 2.0
-
-
-
-\## Setup Instructions
+- OAuth 2.0
 
 
 
-\### 1. Prerequisites
-
-\- Install Node.js (LTS version recommended)
-
-\- Have a Google Cloud account and a Facebook Developer account.
+## Setup Instructions
 
 
 
-\### 2. Clone the Repository
+### 1. Prerequisites
 
-git clone \[insert your GitHub repo URL]
+- Install Node.js (LTS version recommended)
+
+- Have a Google Cloud account and a Facebook Developer account.
+
+
+
+### 2. Clone the Repository
+
+git clone [insert your GitHub repo URL]
 
 cd social-login-app
 
 
 
-\### 3. Install Dependencies
+### 3. Install Dependencies
 
 npm install
 
 
 
-\### 4. Configure Environment Variables
+### 4. Configure Environment Variables
 
 Create a .env file in the project root:
 
 
 
-GOOGLE\_CLIENT\_ID=your\_google\_client\_id\_here
+GOOGLE_CLIENT_ID=your_google_client_id_here
 
-GOOGLE\_CLIENT\_SECRET=your\_google\_client\_secret\_here
+GOOGLE_CLIENT_SECRET=your_google_client_secret_here
 
-FACEBOOK\_CLIENT\_ID=your\_facebook\_app\_id\_here
+FACEBOOK_CLIENT_ID=your_facebook_app_id_here
 
-FACEBOOK\_CLIENT\_SECRET=your\_facebook\_app\_secret\_here
+FACEBOOK_CLIENT_SECRET=your_facebook_app_secret_here
 
-SESSION\_SECRET=your\_random\_secret
+SESSION_SECRET=your_random_secret
 
 PORT=3000
 
 
 
-\### 5. Run the Application
+### 5. Run the Application
 
 npm start
 
@@ -106,47 +106,47 @@ Visit: http://localhost:3000
 
 
 
-\## Configuring OAuth
+## Configuring OAuth
 
 
 
-\### Google Login Setup
+### Google Login Setup
 
-1\. Go to Google Cloud Console → Credentials.
+1. Go to Google Cloud Console → Credentials.
 
-2\. Create a new OAuth 2.0 Client ID (type: Web Application).
+2. Create a new OAuth 2.0 Client ID (type: Web Application).
 
-3\. Set Authorized redirect URI: http://localhost:3000/auth/google/callback
+3. Set Authorized redirect URI: http://localhost:3000/auth/google/callback
 
-4\. Copy the Client ID and Client Secret into your .env file.
-
-
-
-\### Facebook Login Setup
-
-1\. Go to Facebook for Developers.
-
-2\. Create a new app → Add Facebook Login as a product.
-
-3\. Add this redirect URI under Facebook Login → Settings: http://localhost:3000/auth/facebook/callback
-
-4\. In Settings → Basic, add localhost under App Domains.
-
-5\. Copy the App ID and App Secret into your .env file.
+4. Copy the Client ID and Client Secret into your .env file.
 
 
 
-\## Testing \& Verification
+### Facebook Login Setup
 
-1\. Start the app (npm start).
+1. Go to Facebook for Developers.
 
-2\. Go to http://localhost:3000.
+2. Create a new app → Add Facebook Login as a product.
 
-3\. Click Login with Google → sign in → redirected to /profile.
+3. Add this redirect URI under Facebook Login → Settings: http://localhost:3000/auth/facebook/callback
 
-4\. Click Login with Facebook → sign in → redirected to /profile.
+4. In Settings → Basic, add localhost under App Domains.
 
-5\. Verify that:
+5. Copy the App ID and App Secret into your .env file.
+
+
+
+## Testing & Verification
+
+1. Start the app (npm start).
+
+2. Go to http://localhost:3000.
+
+3. Click Login with Google → sign in → redirected to /profile.
+
+4. Click Login with Facebook → sign in → redirected to /profile.
+
+5. Verify that:
 
 &nbsp;  - The user’s name and profile photo are displayed.
 
@@ -156,59 +156,59 @@ Visit: http://localhost:3000
 
 
 
-\## Screenshots
+## Screenshots
 
-[Login Page](C:\\Users\\keyag\\Documents\\social-login-app\\screenshots\\login.png) [Successful Google Login](C:\\Users\\keyag\\Documents\\social-login-app\\screenshots\\GoogleLogin.png) 
+[Login Page](C:UserskeyagDocumentssocial-login-appscreenshotslogin.png) [Successful Google Login](C:UserskeyagDocumentssocial-login-appscreenshotsGoogleLogin.png) 
 
-[Successful Facebook Login](C:\\Users\\keyag\\Documents\\social-login-app\\screenshots\\FacebookLogin.png) 
-
-
-
-\##  Error Handling \& Security Measures
-
-\- Secrets stored in .env (not committed to repo).
-
-\- Proper failureRedirect and try/catch for OAuth callbacks.
-
-\- HTTPS recommended for production.
-
-\- Session cookies configured securely.
-
-\- Logs exclude sensitive tokens.
+[Successful Facebook Login](C:UserskeyagDocumentssocial-login-appscreenshotsFacebookLogin.png) 
 
 
 
-\##  Project Submission Details
+##  Error Handling & Security Measures
 
-GitHub Repository URL: \[Insert your GitHub repo link here]
+- Secrets stored in .env (not committed to repo).
 
-Screenshots Folder: [/screenshots/](C:\\Users\\keyag\\Documents\\social-login-app\\screenshots) containing login flow evidence
+- Proper failureRedirect and try/catch for OAuth callbacks.
+
+- HTTPS recommended for production.
+
+- Session cookies configured securely.
+
+- Logs exclude sensitive tokens.
+
+
+
+##  Project Submission Details
+
+GitHub Repository URL: [https://github.com/Kayuhnaise/Social-Login-App]
+
+Screenshots Folder: [/screenshots/](C:UserskeyagDocumentssocial-login-appscreenshots) containing login flow evidence
 
 Implementation Guide / Report: See accompanying PDF/Word report
 
 
 
-\##  References
+##  References
 
-\- Facebook Login Permissions: https://developers.facebook.com/docs/facebook-login/permissions
+- Facebook Login Permissions: https://developers.facebook.com/docs/facebook-login/permissions
 
-\- Google OAuth 2.0 Documentation: https://developers.google.com/identity/protocols/oauth2
+- Google OAuth 2.0 Documentation: https://developers.google.com/identity/protocols/oauth2
 
-\- Passport.js Strategies: http://www.passportjs.org/packages/
+- Passport.js Strategies: http://www.passportjs.org/packages/
 
 
 
-\##  Final Checklist
+##  Final Checklist
 
-\[ ] Google login works and redirects to /profile.
+[ ] Google login works and redirects to /profile.
 
-\[ ] Facebook login works (no Invalid Scopes error).
+[ ] Facebook login works (no Invalid Scopes error).
 
-\[ ] Screenshots added under /screenshots/.
+[ ] Screenshots added under /screenshots/.
 
-\[ ] .env not uploaded to GitHub.
+[ ] .env not uploaded to GitHub.
 
-\[ ] README filled with screenshots and repo URLs.
+[ ] README filled with screenshots and repo URLs.
 
 
 
