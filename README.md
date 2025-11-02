@@ -6,7 +6,7 @@
 
 ### Course: SWENG 861 — Week 2 Assignment
 
-### Date: 11/1/25
+### Date: 11/01/25
 
 
 
@@ -66,7 +66,7 @@ This project implements a social media login service that allows users to authen
 
 ### 2. Clone the Repository
 
-git clone [insert your GitHub repo URL]
+git clone [https://github.com/Kayuhnaise/Social-Login-App]
 
 cd social-login-app
 
