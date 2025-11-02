@@ -184,8 +184,6 @@ GitHub Repository URL: [https://github.com/Kayuhnaise/Social-Login-App]
 
 Screenshots Folder: [/screenshots/](C:UserskeyagDocumentssocial-login-appscreenshots) containing login flow evidence
 
-Implementation Guide / Report: See accompanying PDF/Word report
-
 
 
 ##  References
