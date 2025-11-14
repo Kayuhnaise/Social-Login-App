@@ -1,22 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Social Media Login</title>
-  <style>
-    body { font-family: Arial; text-align: center; margin-top: 50px; }
-    a { display: inline-block; margin: 10px; padding: 10px 20px; background: #4285F4; color: white; text-decoration: none; border-radius: 5px; }
-    .facebook { background: #3B5998; }
-  </style>
-</head>
-<body>
-  <h1>Welcome to the Social Login App</h1>
-  <% if (!user) { %>
-    <a href="/auth/google">Login with Google</a>
-    <a href="/auth/facebook" class="facebook">Login with Facebook</a>
-  <% } else { %>
-    <p>Hello, <%= user.displayName %>!</p>
-    <a href="/profile">View Profile</a>
-    <a href="/logout">Logout</a>
-  <% } %>
-</body>
-</html>
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./App.css";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);

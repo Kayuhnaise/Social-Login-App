@@ -1,214 +1,143 @@
-\# Social Media Login Service
+# Social Login Frontend + CRUD Dashboard
+A full-stack authentication and dashboard application built for SWENG 861.
 
+# Project Overview
 
+This project implements a modern full-stack web application featuring:
 
-\### Author: Keya Gangadharan
+- Google and Facebook OAuth 2.0 Login
+- Secure session-based authentication
+- Protected dashboard with user avatar and name
+- Full CRUD operations
+- Modern UI with responsive design
+- React frontend + Express backend with CORS and cookies
 
-\### Course: SWENG 861 — Week 2 Assignment
+Developed as part of the SWENG 861 – Frontend Development Assignment.
 
-\### Date: 11/1/25
+# Screenshots
 
+Create a `/screenshots` folder and add your images:
 
+- Login Page
+- Dashboard (with avatar)
+- CRUD operations
+- OAuth Profile JSON
 
-\## Overview
+# Features
 
-This project implements a social media login service that allows users to authenticate using their Google and Facebook accounts via OAuth 2.0. It demonstrates secure authentication flow, session management, error handling, and a responsive user interface built with Node.js, Express, and Passport.js. The system can be extended to support Apple, LinkedIn, or Okta SSO for additional security and scalability.
+## Authentication
+- Google OAuth 2.0
+- Facebook OAuth 2.0
+- Session-based authentication using express-session
+- Protected routes enforced by backend and frontend
 
+## Frontend (React)
+- React Router navigation
+- Modular component architecture
+- Avatar dashboard
+- ItemForm and ItemList CRUD components
 
+## Backend (Node.js + Express)
+- Passport.js strategies for Google and Facebook
+- CORS configured with credentials enabled
+- REST API for CRUD operations
 
-\## Features Implemented
+# Architecture
 
-| Feature | Description |
+```
+social-login-app/
+│
+├── server.js
+├── .env
+│
+└── frontend/
+    ├── src/
+    │   ├── components/
+    │   ├── pages/
+    │   ├── App.jsx
+    │   ├── App.css
+    │   └── index.js
+    └── package.json
+```
 
-|----------|-------------|
+Frontend: http://localhost:3001  
+Backend: http://localhost:3000  
 
-| Google Login | Implements OAuth 2.0 authentication using Google APIs. |
+# Installation and Setup
 
-| Facebook Login | Integrates Facebook Login via OAuth 2.0 (in development mode). |
-
-| Secure Sessions | Uses express-session to manage authenticated user sessions. |
-
-| Error Handling | Handles OAuth errors, missing credentials, and session timeouts. |
-
-| Responsive UI | EJS-based frontend allows users to select their preferred login provider. |
-
-| Environment Configuration | Secrets and keys stored securely in a .env file. |
-
-
-
-\## Technologies Used
-
-\- Node.js + Express.js
-
-\- Passport.js (with passport-google-oauth20 and passport-facebook)
-
-\- EJS templating
-
-\- express-session
-
-\- dotenv
-
-\- OAuth 2.0
-
-
-
-\## Setup Instructions
-
-
-
-\### 1. Prerequisites
-
-\- Install Node.js (LTS version recommended)
-
-\- Have a Google Cloud account and a Facebook Developer account.
-
-
-
-\### 2. Clone the Repository
-
-git clone \[insert your GitHub repo URL]
-
+## 1. Clone Repository
+```
+git clone https://github.com/your-username/social-login-app.git
 cd social-login-app
+```
 
+## 2. Backend Setup
 
-
-\### 3. Install Dependencies
-
+### Install dependencies:
+```
 npm install
+```
 
+### Create `.env`:
+```
+GOOGLE_CLIENT_ID=your_google_id
+GOOGLE_CLIENT_SECRET=your_google_secret
+FACEBOOK_CLIENT_ID=your_facebook_id
+FACEBOOK_CLIENT_SECRET=your_facebook_secret
+SESSION_SECRET=your_session_secret
+```
 
-
-\### 4. Configure Environment Variables
-
-Create a .env file in the project root:
-
-
-
-GOOGLE\_CLIENT\_ID=your\_google\_client\_id\_here
-
-GOOGLE\_CLIENT\_SECRET=your\_google\_client\_secret\_here
-
-FACEBOOK\_CLIENT\_ID=your\_facebook\_app\_id\_here
-
-FACEBOOK\_CLIENT\_SECRET=your\_facebook\_app\_secret\_here
-
-SESSION\_SECRET=your\_random\_secret
-
-PORT=3000
-
-
-
-\### 5. Run the Application
-
+### Start backend:
+```
 npm start
-
-Visit: http://localhost:3000
-
-
-
-\## Configuring OAuth
-
-
-
-\### Google Login Setup
-
-1\. Go to Google Cloud Console → Credentials.
-
-2\. Create a new OAuth 2.0 Client ID (type: Web Application).
-
-3\. Set Authorized redirect URI: http://localhost:3000/auth/google/callback
-
-4\. Copy the Client ID and Client Secret into your .env file.
-
-
-
-\### Facebook Login Setup
-
-1\. Go to Facebook for Developers.
-
-2\. Create a new app → Add Facebook Login as a product.
-
-3\. Add this redirect URI under Facebook Login → Settings: http://localhost:3000/auth/facebook/callback
-
-4\. In Settings → Basic, add localhost under App Domains.
-
-5\. Copy the App ID and App Secret into your .env file.
-
-
-
-\## Testing \& Verification
-
-1\. Start the app (npm start).
-
-2\. Go to http://localhost:3000.
-
-3\. Click Login with Google → sign in → redirected to /profile.
-
-4\. Click Login with Facebook → sign in → redirected to /profile.
-
-5\. Verify that:
-
-&nbsp;  - The user’s name and profile photo are displayed.
-
-&nbsp;  - Sessions persist until logout.
-
-&nbsp;  - No credentials are exposed in logs.
-
-
-
-\## Screenshots
-
-[Login Page](C:\\Users\\keyag\\Documents\\social-login-app\\screenshots\\login.png) [Successful Google Login](C:\\Users\\keyag\\Documents\\social-login-app\\screenshots\\GoogleLogin.png) 
-
-[Successful Facebook Login](C:\\Users\\keyag\\Documents\\social-login-app\\screenshots\\FacebookLogin.png) 
-
-
-
-\##  Error Handling \& Security Measures
-
-\- Secrets stored in .env (not committed to repo).
-
-\- Proper failureRedirect and try/catch for OAuth callbacks.
-
-\- HTTPS recommended for production.
-
-\- Session cookies configured securely.
-
-\- Logs exclude sensitive tokens.
-
-
-
-\##  Project Submission Details
-
-GitHub Repository URL: \[Insert your GitHub repo link here]
-
-Screenshots Folder: [/screenshots/](C:\\Users\\keyag\\Documents\\social-login-app\\screenshots) containing login flow evidence
-
-Implementation Guide / Report: See accompanying PDF/Word report
-
-
-
-\##  References
-
-\- Facebook Login Permissions: https://developers.facebook.com/docs/facebook-login/permissions
-
-\- Google OAuth 2.0 Documentation: https://developers.google.com/identity/protocols/oauth2
-
-\- Passport.js Strategies: http://www.passportjs.org/packages/
-
-
-
-\##  Final Checklist
-
-\[ ] Google login works and redirects to /profile.
-
-\[ ] Facebook login works (no Invalid Scopes error).
-
-\[ ] Screenshots added under /screenshots/.
-
-\[ ] .env not uploaded to GitHub.
-
-\[ ] README filled with screenshots and repo URLs.
-
-
-
+```
+
+## 3. Frontend Setup
+```
+cd frontend
+npm install
+npm start
+```
+
+# API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /profile | Returns authenticated user |
+| GET | /logout | Logs out user and destroys session |
+| GET | /api/items | Retrieve all items |
+| POST | /api/items | Create new item |
+| PUT | /api/items/:id | Update an item |
+| DELETE | /api/items/:id | Delete an item |
+
+All `fetch()` calls must include:
+
+```
+credentials: "include"
+```
+
+# Testing
+
+## Manual UI Testing
+- Google and Facebook login flows
+- Dashboard protection and redirect behavior
+- CRUD operations verified
+- Refresh persistence of session
+- Logout validation
+
+## API Testing
+- Verified endpoints through browser and Postman
+- Checked session cookies and 401 responses
+
+# Security
+
+- OAuth secrets stored securely in `.env`
+- Sessions managed with express-session
+- CORS restricted to frontend origin
+- httpOnly cookies for session protection
+
+# Technologies
+
+Frontend: React, React Router  
+Backend: Node.js, Express, Passport.js  
+Other: ES Modules, Fetch API, JSON
