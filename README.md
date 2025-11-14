@@ -14,15 +14,6 @@ This project implements a modern full-stack web application featuring:
 
 Developed as part of the SWENG 861 – Frontend Development Assignment.
 
-# Screenshots
-
-Create a `/screenshots` folder and add your images:
-
-- Login Page
-- Dashboard (with avatar)
-- CRUD operations
-- OAuth Profile JSON
-
 # Features
 
 ## Authentication
@@ -141,5 +132,6 @@ credentials: "include"
 Frontend: React, React Router  
 Backend: Node.js, Express, Passport.js  
 Other: ES Modules, Fetch API, JSON
+
 
 
