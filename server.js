@@ -158,9 +158,16 @@ app.delete("/api/items/:id", (req, res) => {
 /* -----------------------------------------
    START SERVER
 ------------------------------------------ */
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () =>
-  console.log(`Server running on http://localhost:${PORT}`)
-);
-
 console.log("CRUD ROUTES LOADED");
+
+const PORT = process.env.PORT || 3000;
+
+// Only start listening if not in test mode
+if (process.env.NODE_ENV !== "test") {
+  app.listen(PORT, () =>
+    console.log(`Server running on http://localhost:${PORT}`)
+  );
+}
+
+// Export app for Jest tests
+export default app;
